@@ -591,6 +591,11 @@ video {
   display: none;
 }
 
+.size-16 {
+  width: 4rem;
+  height: 4rem;
+}
+
 .h-6 {
   height: 1.5rem;
 }
@@ -609,6 +614,14 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[256px\] {
+  width: 256px;
+}
+
+.w-\[512px\] {
+  width: 512px;
 }
 
 .max-w-screen-xl {
@@ -645,6 +658,26 @@ video {
 
 .animate-slidein700 {
   animation: slidein 1s ease 700ms;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slidein1000 {
+  animation: slidein 1s ease 1000ms;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -694,6 +727,16 @@ video {
   background-color: rgb(173 181 189 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#495057\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(73 80 87 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -717,20 +760,24 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.pl-4 {
-  padding-left: 1rem;
-}
-
 .pl-5 {
   padding-left: 1.25rem;
 }
 
-.pr-4 {
-  padding-right: 1rem;
-}
-
 .pr-5 {
   padding-right: 1.25rem;
+}
+
+.pr-10 {
+  padding-right: 2.5rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -741,12 +788,8 @@ video {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.text-5xl {
-  font-size: 3rem;
-}
-
-.text-base {
-  font-size: 1rem;
+.text-7xl {
+  font-size: 4.5rem;
 }
 
 .text-sm {
@@ -757,12 +800,8 @@ video {
   font-size: 1.25rem;
 }
 
-.text-7xl {
-  font-size: 4.5rem;
-}
-
-.text-2xl {
-  font-size: 1.563rem;
+.text-base {
+  font-size: 1rem;
 }
 
 .font-bold {
@@ -818,43 +857,154 @@ video {
   --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity));
 }
 
-@media not all and (min-width: 768px) {
-  .max-md\:pl-4 {
-    padding-left: 1rem;
-  }
-
-  .max-md\:pl-5 {
-    padding-left: 1.25rem;
-  }
-}
-
 @media not all and (min-width: 640px) {
+  .max-sm\:size-2 {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .max-sm\:size-7 {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .max-sm\:size-8 {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .max-sm\:size-10 {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .max-sm\:size-\[\] {
+    width: ;
+    height: ;
+  }
+
+  .max-sm\:size-\[5rem\] {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .max-sm\:size-\[3rem\] {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .max-sm\:size-\[3em\] {
+    width: 3em;
+    height: 3em;
+  }
+
+  .max-sm\:size-\[2em\] {
+    width: 2em;
+    height: 2em;
+  }
+
+  .max-sm\:w-10 {
+    width: 2.5rem;
+  }
+
+  .max-sm\:w-16 {
+    width: 4rem;
+  }
+
+  .max-sm\:w-32 {
+    width: 8rem;
+  }
+
+  .max-sm\:w-12 {
+    width: 3rem;
+  }
+
+  .max-sm\:w-9 {
+    width: 2.25rem;
+  }
+
+  .max-sm\:w-\[\] {
+    width: ;
+  }
+
+  .max-sm\:w-\[3rem\] {
+    width: 3rem;
+  }
+
+  .max-sm\:w-\[2rem\] {
+    width: 2rem;
+  }
+
+  .max-sm\:w-\[1rem\] {
+    width: 1rem;
+  }
+
+  .max-sm\:w-\[100px\] {
+    width: 100px;
+  }
+
+  .max-sm\:w-\[150px\] {
+    width: 150px;
+  }
+
+  .max-sm\:w-\[128px\] {
+    width: 128px;
+  }
+
+  .max-sm\:w-\[196px\] {
+    width: 196px;
+  }
+
+  .max-sm\:flex-col {
+    flex-direction: column;
+  }
+
   .max-sm\:pl-4 {
     padding-left: 1rem;
-  }
-
-  .max-sm\:pr-4 {
-    padding-right: 1rem;
   }
 
   .max-sm\:pl-5 {
     padding-left: 1.25rem;
   }
 
+  .max-sm\:pr-4 {
+    padding-right: 1rem;
+  }
+
   .max-sm\:pr-5 {
     padding-right: 1.25rem;
   }
 
-  .max-sm\:text-xl {
-    font-size: 1.25rem;
+  .max-sm\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
+  .max-sm\:pr-10 {
+    padding-right: 2.5rem;
+  }
+
+  .max-sm\:pb-5 {
+    padding-bottom: 1.25rem;
   }
 
   .max-sm\:text-3xl {
     font-size: 1.953rem;
   }
 
-  .max-sm\:text-2xl {
-    font-size: 1.563rem;
+  .max-sm\:text-base {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:size-16 {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .sm\:size-2 {
+    width: 0.5rem;
+    height: 0.5rem;
   }
 }
 
