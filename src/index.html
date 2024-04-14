@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David | Portfolio</title>
     <link rel="stylesheet" href="output.css" />
+    <script src="accordion.js"></script>
   </head>
   <body>
     <header>
@@ -95,17 +96,55 @@
       id="about-page"
       class="bg-[#495057] flex flex-col items-center justify-center"
     >
-      <div class="flex max-sm:flex-col flex-row items-center justify-center h-screen w-screen">
+      <div
+        class="flex max-sm:flex-col flex-row items-center justify-center h-screen w-screen"
+      >
         <p
           class="text-white max-sm:pb-5 pl-10 pr-10 text-left animate-slidein700 max-sm:text-base text-xl font-sans"
         >
-          I am currently taking Bachelor of Science in Information Technology Major in Network and Security. I am learning different kinds of technologies, including web technologies to widen my versatility in programming.
+          I am currently taking Bachelor of Science in Information Technology
+          Major in Network and Security. I am learning different kinds of
+          technologies, including web technologies to widen my versatility in
+          programming.
         </p>
         <img
           src="./img/profile_picture.jpg"
           alt="Profile Picture"
           class="max-sm:w-[196px] w-[512px] pr-10 animate-slidein700"
         />
+      </div>
+    </section>
+    <section
+      id="skills-page"
+      class="bg-[#343A40] flex flex-col items-center justify-center"
+    >
+      <div class="flex flex-col items-center justify-center h-screen w-screen">
+        <h1
+          class="text-white max-sm:pl-4 max-sm:pr-4 pb-2 text-center animate-slidein500 font-sans font-bold max-sm:text-3xl text-5xl"
+        >
+          Skills
+        </h1>
+        
+        <div x-data="{ open: false }" class="max-h-screen w-[50em] flex flex-col items-center justify-center relative overflow-hidden">
+          <div  @click="open = ! open" class="p-4 bg-white w-1/2 rounded flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <h4 class="font-medium text-base text-black">Programming Language</h4>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div x-show="open" @click.outside="open = false"  x-transition:enter="transition ease-out duration-1000"
+                x-transition:enter-start="opacity-0 translate-y-0"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-1000"
+                x-transition:leave-start="opacity-100 translate-y-10"
+                x-transition:leave-end="opacity-0 translate-y-0" class="w-1/2 bg-white p-4 ">
+            <h4 class="text-sm text-slate-400"></h4>
+          </div>
+        </div>
+        <script src="//unpkg.com/alpinejs" defer></script>
+        
       </div>
     </section>
   </body>
