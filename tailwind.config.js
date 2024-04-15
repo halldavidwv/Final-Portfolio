@@ -21,6 +21,12 @@ module.exports = {
         slidein1000: "slidein 1s ease 1000ms",
       },
     },
+    transitionDuration: {
+      '500': "500ms",
+      '1000': "1000ms",
+      '1500': '1500ms',
+      '2000': "2000ms",
+    },
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }

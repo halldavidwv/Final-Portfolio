@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David | Portfolio</title>
-    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script src="scroll_to_function.js"></script>
   </head>
   <body>
     <header>
-      <nav class="bg-[#ADB5BD] border-gray-200 px-4 lg:px-6 py-2.5">
+      <nav class="bg-[#ADB5BD] fixed w-screen border-gray-200 px-4 lg:px-6 py-2.5">
         <div
           class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
         >
@@ -18,25 +23,28 @@
             >
           </a>
           <div class="flex items-center lg:order-2">
-            <a
-              href="#"
-              class="text-black hover:bg-white font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2"
-              >Home</a
+            <button onclick="scroll_to_function('home')">
+              <span
+                class="text-black hover:bg-white font-medium max-sm:hidden rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2"
+                >Home</span
+              >
+            </button>
+            <button onclick="scroll_to_function('about')">
+              <span
+                class="text-black bg-primary-700 hover:bg-white font-medium max-sm:hidden rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+                >About</span
+              >
+            </button>
+            <button onclick="scroll_to_function('skills-and-contact')">
+            <span
+              class="text-black bg-primary-700 hover:bg-white font-medium max-sm:hidden rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+              >Skills & Contact</span
             >
-            <a
-              href="#"
-              class="text-black bg-primary-700 hover:bg-white font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
-              >About</a
-            >
-            <a
-              href="#"
-              class="text-black bg-primary-700 hover:bg-white font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
-              >Projects</a
-            >
+          </button>
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
-              class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
               aria-controls="mobile-menu-2"
               aria-expanded="false"
             >
@@ -95,17 +103,152 @@
       id="about-page"
       class="bg-[#495057] flex flex-col items-center justify-center"
     >
-      <div class="flex max-sm:flex-col flex-row items-center justify-center h-screen w-screen">
+      <div
+        class="flex max-sm:flex-col flex-row items-center justify-center h-screen w-screen"
+      >
         <p
           class="text-white max-sm:pb-5 pl-10 pr-10 text-left animate-slidein700 max-sm:text-base text-xl font-sans"
         >
-          I am currently taking Bachelor of Science in Information Technology Major in Network and Security. I am learning different kinds of technologies, including web technologies to widen my versatility in programming.
+          I am currently taking Bachelor of Science in Information Technology
+          Major in Network and Security. I am learning different kinds of
+          technologies, including web technologies to widen my versatility in
+          programming.
         </p>
         <img
           src="./img/profile_picture.jpg"
           alt="Profile Picture"
-          class="max-sm:w-[196px] w-[512px] pr-10 animate-slidein700"
+          class="max-sm:w-[196px] w-[512px] max-sm:pr-0 pr-10 animate-slidein700"
         />
+      </div>
+    </section>
+    <section
+      id="skills-and-contact-page"
+      class="bg-[#343A40] flex flex-col items-center justify-center"
+    >
+      <div
+        class="flex max-sm:flex-col flex-row max-sm:justify-center h-screen w-screen"
+      >
+        <div
+          class="flex flex-col max-sm:pl-0 pl-5 items-center justify-center max-sm:h-auto h-screen max-sm:w-screen w-[35em]"
+        >
+          <h1
+            class="text-white max-sm:pl-4 pl-5 max-sm:pr-4 pb-2 text-center animate-slidein500 font-sans font-bold max-sm:text-3xl text-5xl"
+          >
+            Skills
+          </h1>
+          <div class="animate-slidein700">
+            <div
+              x-data="{ open: false }"
+              class="max-h-screen w-[35em] p-2 flex flex-col items-center justify-center relative overflow-hidden"
+            >
+              <div
+                @click="open = ! open"
+                class="p-3 bg-white w-1/2 rounded flex justify-between items-center"
+              >
+                <div class="flex items-center gap-2">
+                  <h4 class="font-medium text-base text-black">
+                    Programming Language
+                  </h4>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div
+                x-show="open"
+                @click.outside="open = false"
+                x-transition:enter="transition ease-out duration-1000"
+                x-transition:enter-start="opacity-0 translate-y-0"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-1000"
+                x-transition:leave-start="opacity-100 translate-y-10"
+                x-transition:leave-end="opacity-0 translate-y-0"
+                class="w-1/2 bg-white p-4"
+              >
+                <i class="fa-brands fa-java fa-2xl p-2"></i>
+                <i class="fa-brands fa-js fa-2xl p-2"></i>
+                <i class="fa-brands fa-python fa-2xl p-2"></i>
+                <i class="fa-solid fa-code fa-xl p-2"></i>
+              </div>
+            </div>
+            <div
+              x-data="{ open: false }"
+              class="max-h-screen w-[35em] p-2 flex flex-col items-center justify-center relative overflow-hidden"
+            >
+              <div
+                @click="open = ! open"
+                class="p-3 bg-white w-1/2 rounded flex justify-between items-center"
+              >
+                <div class="flex items-center gap-2">
+                  <h4 class="font-medium text-base text-black">
+                    Back-end Languages
+                  </h4>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div
+                x-show="open"
+                @click.outside="open = false"
+                x-transition:enter="transition ease-out duration-1000"
+                x-transition:enter-start="opacity-0 translate-y-0"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-1000"
+                x-transition:leave-start="opacity-100 translate-y-10"
+                x-transition:leave-end="opacity-0 translate-y-0"
+                class="w-1/2 bg-white p-4"
+              >
+                <i class="fa-brands fa-php fa-2xl p-2"></i>
+                <i class="fa-solid fa-database fa-xl p-2"></i>
+              </div>
+            </div>
+          </div>
+          <script src="//unpkg.com/alpinejs" defer></script>
+        </div>
+        <div
+          class="flex flex-col max-sm:pr-0 max-sm:pt-10 pl-[20vh] items-center justify-center max-sm:h-auto h-screen max-sm:w-screen w-auto"
+        >
+          <h1
+            class="text-white max-sm:pl-4 max-sm:pr-4 pb-2 text-right animate-slidein500 font-sans font-bold max-sm:text-3xl text-5xl"
+          >
+            Contact Me
+          </h1>
+          <a class="animate-slidein700" href="https://github.com/halldavidwv"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="96"
+              height="96"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   </body>
