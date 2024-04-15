@@ -1,21 +1,20 @@
 function scroll_to_function(page_section) {
     switch(page_section) {
         case "home":
-            window.scrollTo({
-                top: 0,
+            var view_div = document.getElementById('landing-page');
+            view_div.scrollIntoView({
                 behavior: 'smooth'
             });
             break;
         case "about":
-            window.scrollTo({
-                top: 600,
+            var view_div = document.getElementById('about-page');
+            view_div.scrollIntoView({
                 behavior: 'smooth'
-                
             });
             break;
         case "skills-and-contact":
-            window.scrollTo({
-                top: 100,
+            var view_div = document.getElementById('skills-and-contact-page');
+            view_div.scrollIntoView({
                 behavior: 'smooth'
             });
             break;

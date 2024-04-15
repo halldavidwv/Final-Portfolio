@@ -13,7 +13,7 @@
   </head>
   <body>
     <header>
-      <nav class="bg-[#ADB5BD] border-gray-200 px-4 lg:px-6 py-2.5">
+      <nav class="bg-[#ADB5BD] fixed w-screen border-gray-200 px-4 lg:px-6 py-2.5">
         <div
           class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
         >
@@ -23,7 +23,7 @@
             >
           </a>
           <div class="flex items-center lg:order-2">
-            <button onclick="">
+            <button onclick="scroll_to_function('home')">
               <span
                 class="text-black hover:bg-white font-medium max-sm:hidden rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2"
                 >Home</span
@@ -35,11 +35,12 @@
                 >About</span
               >
             </button>
-            <a
-              href="#"
+            <button onclick="scroll_to_function('skills-and-contact')">
+            <span
               class="text-black bg-primary-700 hover:bg-white font-medium max-sm:hidden rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
-              >Skills & Contact</a
+              >Skills & Contact</span
             >
+          </button>
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
