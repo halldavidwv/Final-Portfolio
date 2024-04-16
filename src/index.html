@@ -137,17 +137,17 @@
         class="flex max-sm:flex-col flex-row max-sm:justify-center"
       >
         <div
-          class="flex flex-col max-sm:pl-0 pl-5 items-center justify-center max-sm:h-auto h-screen max-sm:w-screen w-[35em]"
+          class="flex flex-col max-sm:pl-0 items-start justify-center max-sm:h-auto h-screen max-sm:w-screen w-[35em]"
         >
           <h1
-            class="text-white max-sm:pl-4 pl-5 max-sm:pr-4 pb-2 text-center animate-slidein500 font-sans font-bold max-sm:text-3xl text-5xl"
+            class="text-white max-sm:pl-4 pl-[1.75em] max-sm:pr-4 pb-2 text-center animate-slidein500 font-sans font-bold max-sm:text-3xl text-5xl"
           >
             Skills
           </h1>
           <div class="animate-slidein700">
             <div
               x-data="{ open: false }"
-              class="max-h-screen w-[35em] p-2 flex flex-col items-center justify-center relative overflow-hidden"
+              class="max-h-screen w-[35em] p-2 flex flex-col items-start justify-center relative overflow-hidden"
             >
               <div
                 @click="open = ! open"
@@ -192,7 +192,7 @@
             </div>
             <div
               x-data="{ open: false }"
-              class="max-h-screen w-[35em] p-2 flex flex-col items-center justify-center relative overflow-hidden"
+              class="max-h-screen w-[35em] p-2 flex flex-col items-start justify-center relative overflow-hidden"
             >
               <div
                 @click="open = ! open"
@@ -237,7 +237,7 @@
           <script src="//unpkg.com/alpinejs" defer></script>
         </div>
         <div
-          class="flex flex-col max-sm:pr-0 max-sm:pt-10 pl-[20vh] items-center justify-center max-sm:h-auto h-screen max-sm:w-screen"
+          class="flex flex-col max-sm:pr-0 max-sm:pt-10 pl-[5vh] pr-[5vh] items-center justify-center max-sm:h-auto h-screen max-sm:w-screen"
         >
           <h1
             class="text-white max-sm:pl-4 max-sm:pr-4 pb-2 text-right animate-slidein500 font-sans font-bold max-sm:text-3xl text-5xl"

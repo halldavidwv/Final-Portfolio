@@ -574,6 +574,10 @@ video {
   position: relative;
 }
 
+.m-10 {
+  margin: 2.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -606,6 +610,10 @@ video {
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mr-10 {
+  margin-right: 2.5rem;
 }
 
 .block {
@@ -760,6 +768,10 @@ video {
   flex-wrap: wrap;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
 }
@@ -899,6 +911,86 @@ video {
   padding-top: 0px;
 }
 
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
+.pl-\[\] {
+  padding-left: ;
+}
+
+.pl-\[20em\] {
+  padding-left: 20em;
+}
+
+.pl-\[10em\] {
+  padding-left: 10em;
+}
+
+.pl-\[5em\] {
+  padding-left: 5em;
+}
+
+.pl-\[2em\] {
+  padding-left: 2em;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
+.pl-1 {
+  padding-left: 0.25rem;
+}
+
+.pl-12 {
+  padding-left: 3rem;
+}
+
+.pl-\[3em\] {
+  padding-left: 3em;
+}
+
+.pl-\[2\.5em\] {
+  padding-left: 2.5em;
+}
+
+.pl-\[2\.25em\] {
+  padding-left: 2.25em;
+}
+
+.pl-\[1\.75em\] {
+  padding-left: 1.75em;
+}
+
+.pl-\[15vh\] {
+  padding-left: 15vh;
+}
+
+.pl-\[10vh\] {
+  padding-left: 10vh;
+}
+
+.pr-\[5vh\] {
+  padding-right: 5vh;
+}
+
+.pr-\[10vh\] {
+  padding-right: 10vh;
+}
+
+.pl-\[5vh\] {
+  padding-left: 5vh;
+}
+
+.pl-3 {
+  padding-left: 0.75rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -909,6 +1001,10 @@ video {
 
 .text-right {
   text-align: right;
+}
+
+.text-start {
+  text-align: start;
 }
 
 .align-middle {
