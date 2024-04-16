@@ -18,5 +18,11 @@ function scroll_to_function(page_section) {
                 behavior: 'smooth'
             });
             break;
+        case "projects":
+            var view_div = document.getElementById('projects-page');
+            view_div.scrollIntoView({
+                behavior: 'smooth'
+            });
+            break;
     }
 }
